@@ -1,0 +1,23 @@
+{
+  "rewrites": [
+    {
+      "source": "/games/:game/:path*",
+      "destination": "/games/:game/:path*"
+    },
+    {
+      "source": "/animations/:file",
+      "destination": "/animations/:file"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/games/(.*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        }
+      ]
+    }
+  ]
+}

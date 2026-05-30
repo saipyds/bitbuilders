@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BitBuilders — Student Showcase</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Courier+Prime&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── SCANLINE OVERLAY ── -->
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <!-- ── HEADER ── -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo-block">
+        <div class="logo-pixel-icon" aria-hidden="true">
+          <span></span><span></span><span></span>
+          <span></span><span></span><span></span>
+          <span></span><span></span><span></span>
+        </div>
+        <div class="logo-text-block">
+          <h1 class="logo-title">BitBuilders</h1>
+          <p class="logo-sub">Grade 7 · Student Showcase</p>
+        </div>
+      </div>
+      <div class="header-stats">
+        <div class="stat-pill"><span class="stat-num" id="game-count">0</span><span class="stat-label">GAMES</span></div>
+        <div class="stat-pill"><span class="stat-num" id="anim-count">0</span><span class="stat-label">ANIMATIONS</span></div>
+      </div>
+    </div>
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee-track">
+        <span>JUMP · SHOOT · COLLECT · DODGE · RUN · BUILD · PLAY · CREATE · IMAGINE · JUMP · SHOOT · COLLECT · DODGE · RUN · BUILD · PLAY · CREATE · IMAGINE ·&nbsp;</span>
+        <span>JUMP · SHOOT · COLLECT · DODGE · RUN · BUILD · PLAY · CREATE · IMAGINE · JUMP · SHOOT · COLLECT · DODGE · RUN · BUILD · PLAY · CREATE · IMAGINE ·&nbsp;</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── FILTER BAR ── -->
+  <nav class="filter-bar" role="tablist" aria-label="Filter works">
+    <button class="filter-btn active" data-filter="all"   role="tab" aria-selected="true">ALL</button>
+    <button class="filter-btn"        data-filter="game"  role="tab" aria-selected="false">GAMES</button>
+    <button class="filter-btn"        data-filter="animation" role="tab" aria-selected="false">ANIMATIONS</button>
+  </nav>
+
+  <!-- ── CARD GRID ── -->
+  <main class="card-grid" id="card-grid" aria-live="polite"></main>
+
+  <!-- ── EMPTY STATE ── -->
+  <div class="empty-state" id="empty-state" hidden>
+    <span class="empty-icon">🕹️</span>
+    <p>No items found</p>
+  </div>
+
+  <!-- ── GAME MODAL ── -->
+  <div class="modal-backdrop" id="game-backdrop" hidden aria-modal="true" role="dialog">
+    <div class="modal-shell">
+      <div class="modal-topbar">
+        <span class="modal-game-title" id="modal-game-title">Game</span>
+        <span class="modal-builder-name" id="modal-builder-name"></span>
+        <button class="modal-close-btn" id="close-game-modal" aria-label="Close game">✕ CLOSE</button>
+      </div>
+      <div class="iframe-wrap">
+        <iframe
+          id="game-frame"
+          src=""
+          title="Game"
+          allow="autoplay"
+          scrolling="no"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── ANIMATION LIGHTBOX ── -->
+  <div class="lightbox-backdrop" id="anim-backdrop" hidden aria-modal="true" role="dialog">
+    <div class="lightbox-shell">
+      <button class="lightbox-close-btn" id="close-anim-lightbox" aria-label="Close animation">✕</button>
+      <div class="lightbox-img-wrap">
+        <img id="lightbox-img" src="" alt="" />
+      </div>
+      <div class="lightbox-info">
+        <p class="lightbox-title" id="lightbox-title"></p>
+        <p class="lightbox-builder" id="lightbox-builder"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <p class="footer-text">BitBuilders &copy; 2025 &mdash; Made with ❤️ by Grade 7 students</p>
+    <p class="footer-sub">Built with Phaser 3 · Pixelorama · Vite</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
