@@ -1,26 +1,36 @@
 {
-  "version": 2,
-  "buildCommand": "",
-  "outputDirectory": ".",
   "rewrites": [
     {
-      "source": "/games/:game/:path*",
-      "destination": "/games/:game/:path*"
+      "source": "/play/ansh/:path*",
+      "destination": "/games/ansh/:path*"
     },
     {
-      "source": "/animations/:file",
-      "destination": "/animations/:file"
-    }
-  ],
-  "headers": [
+      "source": "/play/akshat/:path*",
+      "destination": "/games/akshat/:path*"
+    },
     {
-      "source": "/games/(.*)",
-      "headers": [
-        {
-          "key": "X-Frame-Options",
-          "value": "SAMEORIGIN"
-        }
-      ]
+      "source": "/play/karaksh/:path*",
+      "destination": "/games/karaksh/:path*"
+    },
+    {
+      "source": "/play/pun/:path*",
+      "destination": "/games/pun/:path*"
+    },
+    {
+      "source": "/play/riya/:path*",
+      "destination": "/games/riya/:path*"
+    },
+    {
+      "source": "/play/spacesom/:path*",
+      "destination": "/games/spacesom/:path*"
+    },
+    {
+      "source": "/play/satad/:path*",
+      "destination": "/games/satad/:path*"
+    },
+    {
+      "source": "/play/himavd/:path*",
+      "destination": "/games/himavd/:path*"
     }
   ]
 }
