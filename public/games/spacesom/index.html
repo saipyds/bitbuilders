@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>Space Som</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      touch-action: none;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: linear-gradient(145deg, #0b1120, #19233c);
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      min-height: 100dvh;
+    }
+
+    canvas {
+      display: block;
+      max-width: 100vw;
+      max-height: 100dvh;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+    }
+
+    /* Desktop-only alignment nudge */
+    @media (min-width: 1025px) {
+      canvas {
+        transform: translateX(-10px);
+      }
+    }
+
+    #hs-overlay {
+      position: fixed;
+      inset: 0;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.84);
+      backdrop-filter: blur(6px);
+      padding: 16px;
+    }
+
+    #hs-modal {
+      width: min(320px, 92vw);
+      border: 3px solid #6fcf00;
+      border-radius: 20px;
+      background: #161d2a;
+      box-shadow: 0 0 30px rgba(111, 207, 0, 0.32);
+      text-align: center;
+      padding: 24px 18px;
+      font-family: "Courier New", monospace;
+      color: #fff;
+    }
+
+    #hs-modal h2 {
+      color: #ffd966;
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+    #hs-modal p {
+      color: #c7cdd8;
+      margin-bottom: 12px;
+    }
+
+    #hs-name {
+      width: 100%;
+      border: 2px solid #6fcf00;
+      border-radius: 40px;
+      background: #0b0f17;
+      color: #fff;
+      text-align: center;
+      font-size: 18px;
+      font-family: monospace;
+      padding: 12px;
+      margin-bottom: 14px;
+      outline: none;
+    }
+
+    #hs-save {
+      border: none;
+      border-radius: 40px;
+      background: #6fcf00;
+      color: #0e1a00;
+      font-family: monospace;
+      font-size: 22px;
+      font-weight: bold;
+      padding: 10px 24px;
+      cursor: pointer;
+    }
+  </style>
+  <script type="module" crossorigin src="/assets/index-CQp17C6s.js"></script>
+</head>
+<body>
+  <div id="hs-overlay">
+    <div id="hs-modal">
+      <h2>🏆 NEW HIGH SCORE 🏆</h2>
+      <p>Enter your name</p>
+      <input id="hs-name" type="text" maxlength="14" placeholder="CHAMPION" autocomplete="off" />
+      <button id="hs-save">SAVE →</button>
+    </div>
+  </div>
+</body>
+</html>

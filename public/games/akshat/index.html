@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>Runner Shooter</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      touch-action: none;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: linear-gradient(145deg, #0b1120, #19233c);
+      font-family: "Courier New", monospace;
+    }
+
+    body {
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: grid;
+      place-items: center;
+      margin: 0;
+    }
+
+    canvas {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+    }
+
+    @media (max-width: 1024px) {
+      canvas {
+        max-width: 100vw;
+        max-height: 100dvh;
+      }
+    }
+
+    #hs-overlay {
+      position: fixed;
+      inset: 0;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.84);
+      backdrop-filter: blur(4px);
+      z-index: 10000;
+      padding: 16px;
+    }
+
+    #hs-modal {
+      width: min(300px, 92vw);
+      border-radius: 18px;
+      border: 3px solid #6fcf00;
+      background: #1a1f2e;
+      box-shadow: 0 0 24px rgba(111, 207, 0, 0.34);
+      text-align: center;
+      padding: 24px 18px;
+      color: #ffffff;
+    }
+
+    #hs-modal h2 {
+      font-size: 24px;
+      color: #ffd966;
+      margin-bottom: 12px;
+    }
+
+    #hs-modal p {
+      color: #cfd6e6;
+      margin-bottom: 10px;
+    }
+
+    #hs-name {
+      width: 90%;
+      padding: 12px;
+      border-radius: 40px;
+      border: 2px solid #6fcf00;
+      background: #0b0e16;
+      color: #ffffff;
+      text-align: center;
+      font-size: 20px;
+      font-family: "Courier New", monospace;
+      outline: none;
+      margin-bottom: 12px;
+    }
+
+    #hs-save {
+      border: none;
+      border-radius: 40px;
+      background: #6fcf00;
+      color: #101010;
+      font-size: 22px;
+      font-weight: bold;
+      font-family: "Courier New", monospace;
+      padding: 10px 22px;
+      cursor: pointer;
+    }
+
+    #hs-save:active {
+      transform: scale(0.97);
+    }
+  </style>
+  <script type="module" crossorigin src="/assets/index-Dkptl06u.js"></script>
+</head>
+<body>
+  <div id="hs-overlay">
+    <div id="hs-modal">
+      <h2>🏆 NEW HIGH SCORE 🏆</h2>
+      <p>Enter your name</p>
+      <input id="hs-name" maxlength="14" placeholder="CHAMPION" autocomplete="off" autocapitalize="characters" />
+      <br />
+      <button id="hs-save">SAVE →</button>
+    </div>
+  </div>
+</body>
+</html>

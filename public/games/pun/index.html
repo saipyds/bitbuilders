@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>Runner 2</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      touch-action: none;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: linear-gradient(145deg, #0b1120, #19233c);
+    }
+
+    body {
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: grid;
+      place-items: center;
+      margin: 0;
+    }
+
+    canvas {
+      display: block;
+      max-width: 100vw;
+      max-height: 100dvh;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+    }
+
+    #hs-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.88);
+      backdrop-filter: blur(6px);
+      z-index: 10000;
+      justify-content: center;
+      align-items: center;
+      padding: 16px;
+    }
+
+    #hs-modal {
+      background: #141924;
+      border: 3px solid #6fcf00;
+      border-radius: 20px;
+      padding: 32px 24px;
+      text-align: center;
+      width: min(320px, 90vw);
+      box-shadow: 0 0 40px rgba(111, 207, 0, 0.35);
+      font-family: "Courier New", monospace;
+    }
+
+    #hs-modal h2 {
+      color: #ffd966;
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+    #hs-modal p {
+      color: #aaa;
+      margin-bottom: 12px;
+      font-size: 16px;
+    }
+
+    #hs-name {
+      width: 100%;
+      padding: 12px;
+      font-size: max(16px, 1em);
+      font-family: monospace;
+      text-align: center;
+      background: #080c14;
+      border: 2px solid #6fcf00;
+      color: #fff;
+      border-radius: 40px;
+      outline: none;
+      margin-bottom: 14px;
+    }
+
+    #hs-save {
+      background: #6fcf00;
+      border: none;
+      padding: 11px 28px;
+      font-size: 22px;
+      font-weight: bold;
+      font-family: monospace;
+      color: #0e1a00;
+      border-radius: 40px;
+      cursor: pointer;
+    }
+  </style>
+  <script type="module" crossorigin src="/assets/index-zgFSyLMP.js"></script>
+</head>
+<body>
+  <div id="hs-overlay">
+    <div id="hs-modal">
+      <h2>🏆 NEW HIGH SCORE! 🏆</h2>
+      <p>Enter your name</p>
+      <input id="hs-name" type="text" maxlength="14" placeholder="CHAMPION" autocomplete="off" autocapitalize="characters" spellcheck="false" />
+      <button id="hs-save">SAVE →</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+[
+  {
+    "id": "ansh",
+    "title": "Runner",
+    "builder": "Ansh",
+    "type": "game",
+    "path": "/games/ansh"
+  },
+  {
+    "id": "akshat",
+    "title": "Runner Shooter",
+    "builder": "Akshat",
+    "type": "game",
+    "path": "/games/akshat"
+  },
+  {
+    "id": "karaksh",
+    "title": "Jump Ball",
+    "builder": "Karuna & Akshita",
+    "type": "game",
+    "path": "/games/karaksh"
+  },
+  {
+    "id": "pun",
+    "title": "Square Runner",
+    "builder": "Neeraj",
+    "type": "game",
+    "path": "/games/pun"
+  },
+  {
+    "id": "riya",
+    "title": "Helicopta",
+    "builder": "Riya",
+    "type": "game",
+    "path": "/games/riya"
+  },
+  {
+    "id": "spacesom",
+    "title": "Space Som",
+    "builder": "Som",
+    "type": "game",
+    "path": "/games/spacesom"
+  },
+  {
+    "id": "satad",
+    "title": "Cloud Ball",
+    "builder": "Satish & Aditya",
+    "type": "game",
+    "path": "/games/satad"
+  },
+  {
+    "id": "himavd",
+    "title": "Helichopta",
+    "builder": "Himanshu & Avdesh",
+    "type": "game",
+    "path": "/games/himavd"
+  },
+  {
+    "id": "turtle",
+    "title": "Turtle",
+    "builder": "Payal, Akriti & Faiza",
+    "type": "animation",
+    "src": "/animations/Turtle.gif"
+  },
+  {
+    "id": "tortoise",
+    "title": "Tortoise",
+    "builder": "Aradhya & Nitika",
+    "type": "animation",
+    "src": "/animations/Tortoise.gif"
+  },
+  {
+    "id": "dreamsmile",
+    "title": "Dream Smile",
+    "builder": "Rashi & Navya",
+    "type": "animation",
+    "src": "/animations/DreamSmile.gif"
+  },
+  {
+    "id": "beehappy",
+    "title": "Bee Happy",
+    "builder": "Sonakshi & Kashish",
+    "type": "animation",
+    "src": "/animations/BeeHappy.gif"
+  },
+  {
+    "id": "newton",
+    "title": "Newton",
+    "builder": "Ritwik & Aditya N",
+    "type": "animation",
+    "src": "/animations/Newton.gif"
+  }
+]

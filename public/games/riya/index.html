@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>Vertical Endless Runner</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      touch-action: none;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: linear-gradient(145deg, #0b1120, #19233c);
+    }
+
+    body {
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: grid;
+      place-items: center;
+      margin: 0;
+    }
+
+    canvas {
+      display: block;
+      max-width: 100vw;
+      max-height: 100dvh;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+    }
+
+    @media (min-width: 768px) {
+      canvas {
+        transform: translateX(-280px);
+      }
+    }
+
+    #hs-overlay {
+      position: fixed;
+      inset: 0;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+      background: rgba(0, 0, 0, 0.86);
+      backdrop-filter: blur(5px);
+      padding: 16px;
+    }
+
+    #hs-modal {
+      width: min(320px, 92vw);
+      border: 3px solid #6fcf00;
+      border-radius: 20px;
+      background: #121928;
+      box-shadow: 0 0 32px rgba(111, 207, 0, 0.34);
+      text-align: center;
+      padding: 24px 18px;
+      color: #fff;
+      font-family: "Courier New", monospace;
+    }
+
+    #hs-modal h2 {
+      font-size: 24px;
+      color: #ffd966;
+      margin-bottom: 10px;
+    }
+
+    #hs-modal p {
+      color: #c7cdd9;
+      margin-bottom: 12px;
+    }
+
+    #hs-name {
+      width: 100%;
+      border: 2px solid #6fcf00;
+      border-radius: 40px;
+      background: #090d16;
+      color: #fff;
+      text-align: center;
+      font-size: 18px;
+      font-family: monospace;
+      outline: none;
+      padding: 12px;
+      margin-bottom: 14px;
+    }
+
+    #hs-save {
+      border: none;
+      border-radius: 40px;
+      background: #6fcf00;
+      color: #0e1a00;
+      font-size: 22px;
+      font-weight: bold;
+      font-family: monospace;
+      padding: 10px 24px;
+      cursor: pointer;
+    }
+  </style>
+  <script type="module" crossorigin src="/assets/index-nM7nlOQg.js"></script>
+</head>
+<body>
+  <div id="hs-overlay">
+    <div id="hs-modal">
+      <h2>🏆 NEW HIGH SCORE 🏆</h2>
+      <p>Enter your name</p>
+      <input id="hs-name" type="text" maxlength="14" placeholder="CHAMPION" autocomplete="off" />
+      <button id="hs-save">SAVE →</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>Runner - Jump and Collect</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: linear-gradient(145deg, #0b1120 0%, #19233c 100%);
+      font-family: 'Courier New', monospace;
+    }
+
+    body {
+      height: 100vh;
+      height: 100dvh;
+      display: grid;
+      place-items: center;
+      padding-top: max(env(safe-area-inset-top), 0px);
+      touch-action: manipulation;
+      padding: 0;
+      
+    }
+
+    canvas {
+      display: block;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+      max-width: 100%;
+      max-height: 100%;
+      box-shadow: 0 20px 35px rgba(0, 0, 0, 0.5);
+      border-radius: 16px;
+    }
+
+    @media (max-width: 1024px) {
+      canvas {
+        max-width: 100vw;
+        max-height: 100dvh;
+        transform: translateY(-130px);
+      }
+    }
+
+    #hs-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(4px);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 10000;
+      font-family: 'Courier New', monospace;
+      padding: 16px;
+    }
+
+    .hs-modal {
+      background: #1a1f2e;
+      border: 3px solid #6fcf00;
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 20px;
+      width: min(280px, 92vw);
+      box-shadow: 0 0 30px rgba(111, 207, 0, 0.3);
+    }
+
+    .hs-modal h2 {
+      color: #ffd966;
+      margin-bottom: 15px;
+      font-size: 24px;
+    }
+
+    .hs-modal input {
+      width: 90%;
+      padding: 12px;
+      font-size: 20px;
+      text-align: center;
+      font-family: monospace;
+      background: #0b0e16;
+      border: 2px solid #6fcf00;
+      color: #fff;
+      border-radius: 40px;
+      margin: 15px 0;
+      outline: none;
+    }
+
+    .hs-modal button {
+      background: #6fcf00;
+      border: none;
+      padding: 10px 25px;
+      font-size: 22px;
+      font-weight: bold;
+      font-family: monospace;
+      color: #111;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: 0.1s linear;
+    }
+
+    .hs-modal button:active {
+      transform: scale(0.96);
+    }
+  </style>
+  <script type="module" crossorigin src="/assets/index-DomCRZ98.js"></script>
+</head>
+<body>
+  <div id="hs-overlay">
+    <div class="hs-modal">
+      <h2>NEW HIGH SCORE</h2>
+      <p style="color:#ccc;">Enter your name</p>
+      <input type="text" id="hs-name" maxlength="14" placeholder="CHAMPION" autocomplete="off" />
+      <br />
+      <button id="hs-save">SAVE</button>
+    </div>
+  </div>
+</body>
+</html>
